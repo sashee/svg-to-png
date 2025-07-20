@@ -9,19 +9,19 @@ let
 	test1 = pkgs.runCommand "test1.png" {} ''
 mkdir -p $out
 
-cat ${./tests/test1.svg} | ${svg_to_png}/bin/svg-to-png - -c > $out/test1.png
+cat ${./tests/test1.svg} | ${svg_to_png}/bin/svg-to-png > $out/test1.png
 	'';
 
 	test1_white_background = pkgs.runCommand "test1_white_background" {} ''
 mkdir -p $out
 
-cat ${./tests/test1.svg} | ${svg_to_png}/bin/svg-to-png --background white - -c > $out/test1_white_background.png
+cat ${./tests/test1.svg} | ${svg_to_png}/bin/svg-to-png --background white > $out/test1_white_background.png
 	'';
 
 	test1_zoomed = pkgs.runCommand "test1_zoomed" {} ''
 mkdir -p $out
 
-cat ${./tests/test1.svg} | ${svg_to_png}/bin/svg-to-png --background white --zoom 2 - -c > $out/test1_zoomed.png
+cat ${./tests/test1.svg} | ${svg_to_png}/bin/svg-to-png --background white --zoom 2 > $out/test1_zoomed.png
 	'';
 
 in

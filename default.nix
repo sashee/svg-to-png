@@ -29,6 +29,7 @@ ${pkgs.resvg}/bin/resvg \
 --cursive-family "$(${pkgs.fontconfig}/bin/fc-match --format "%{family}" "cursive")" \
 --fantasy-family "$(${pkgs.fontconfig}/bin/fc-match --format "%{family}" "fantasy")" \
 --monospace-family "$(${pkgs.fontconfig}/bin/fc-match --format "%{family}" "monospace")" \
+- -c \
 "\$@"
 
 EOF
